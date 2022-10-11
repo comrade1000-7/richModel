@@ -4,7 +4,7 @@ public class ManagerTest {
     Repository repo = new Repository();
     Manager manager = new Manager(repo);
 
-    Product product = new Book(1, "War and Peace", 100, "Pushkin");
+    Product product = new Smartphone(1, "iPhone", 100_000, "Apple");
     Product product1 = new Book(2, "Crime", 200,"Tolstoy");
     Product product2 = new Book(3, "Sherlock", 300,"Conan Doyle");
     Product product3 = new Book(4, "Harry Potter", 1000,"Rolling");
@@ -30,6 +30,14 @@ public class ManagerTest {
     public void shouldSearchBy () {
         Product[] expected = {product2};
         Product[] actual = manager.searchBy("Sherlock");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSearchByProductMethod () {
+        Product[] expected = {product};
+        Product[] actual = manager.searchBy("iPhone");
 
         Assertions.assertArrayEquals(expected, actual);
     }
