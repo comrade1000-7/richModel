@@ -20,4 +20,10 @@ public class Product {
     public boolean matches (String search) {
         return getName().contains(search);
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
+
 }

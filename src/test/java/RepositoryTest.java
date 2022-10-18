@@ -1,8 +1,8 @@
 import org.junit.jupiter.api.*;
 
 public class RepositoryTest {
-    Repository repo = new Repository();
-    Manager manager = new Manager(repo);
+    private Repository repo = new Repository();
+    private Manager manager = new Manager(repo);
 
     Product product = new Smartphone(1, "iPhone", 100_000, "Apple");
     Product product1 = new Book(2, "Crime", 200,"Tolstoy");
