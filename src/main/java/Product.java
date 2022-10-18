@@ -21,9 +21,4 @@ public class Product {
         return getName().contains(search);
     }
 
-    @Override
-    public String toString() {
-        return getName();
-    }
-
 }
