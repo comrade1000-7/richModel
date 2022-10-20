@@ -1,5 +1,5 @@
 public class Manager {
-    Repository repo;
+    private Repository repo;
 
     public Manager(Repository repo) {
         this.repo = repo;
